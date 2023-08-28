@@ -2,6 +2,12 @@ import sys
 
 import pandas as pd
 
+"""
+Example usage:
+    src/download_taskmaster_wiki_data.py https://taskmaster.fandom.com/wiki/Series_1
+
+This will create a CSV file for each episode on the page.
+"""
 
 wiki_url_to_parse = sys.argv[1]
 table = pd.read_html(wiki_url_to_parse, attrs={"class": "tmtable"})
