@@ -27,8 +27,9 @@ series_urls = (
     "https://taskmaster.fandom.com/wiki/Series_13",
     "https://taskmaster.fandom.com/wiki/Series_14",
     "https://taskmaster.fandom.com/wiki/Series_15",
-    "https://taskmaster.fandom.com/wiki/Series_16",
     "https://taskmaster.fandom.com/wiki/Champion_of_Champions_II",
+    # This series airs on September 21st
+    # "https://taskmaster.fandom.com/wiki/Series_16",
 )
 # TODO: parse these in the future. They're not very interesting anyway
 ny_urls = (
