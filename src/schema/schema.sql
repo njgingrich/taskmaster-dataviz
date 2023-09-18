@@ -1,4 +1,4 @@
-CREATE TABLE `seasons` (
+CREATE TABLE `series` (
   `id` integer UNIQUE PRIMARY KEY,
   `name` text NOT NULL,
   `type` text NOT NULL -- 'regular or champion of champions'
@@ -7,7 +7,7 @@ CREATE TABLE `seasons` (
 CREATE TABLE `episodes` (
   `id` integer UNIQUE PRIMARY KEY,
   `title` text NOT NULL,
-  `number` integer NOT NULL, -- 'The episode number within a season',
+  `number` integer NOT NULL, -- 'The episode number within a series',
   `broadcast_date` text NOT NULL -- 'ISO-8601 date'
 );
 
@@ -25,7 +25,7 @@ CREATE TABLE `tasks` (
 
 CREATE TABLE `teams` (
   `id` integer UNIQUE PRIMARY KEY,
-  `season_id` integer REFERENCES `seasons` (`id`)
+  `season_id` integer REFERENCES `series` (`id`)
 );
 
 CREATE TABLE `contestant_teams` (
@@ -40,7 +40,7 @@ CREATE TABLE `episode_tasks` (
 );
 
 CREATE TABLE `season_contestants` (
-  `season_id` integer REFERENCES `seasons` (`id`),
+  `season_id` integer REFERENCES `series` (`id`),
   `contestant_id` integer REFERENCES `contestants` (`id`)
 );
 
